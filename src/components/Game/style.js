@@ -1,4 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+// 반응형 사이즈 기준
+const sizes = {
+    desktop: 1024,
+    tablet: 768,
+    mobile: 599
+};
+
+const media = Object.keys(sizes).reduce((acc, label) => {
+    acc[label] = (...args) => css`
+        @media (max-width:
+            ${sizes[label] / 16}em) {
+                ${css(...args)};
+            }
+    `;
+    return acc;
+}, {});
 
 export const FlexBox =  styled.div`
     display:flex;
@@ -48,4 +65,7 @@ export const FlexBox =  styled.div`
         transform: scale(1.1);
         opacity: 0.8;
     }
+    ${media.desktop`width: 768px;`}
+    ${media.tablet`width: 100%;`}
+    ${media.mobile`width: 100%;`};
 `;

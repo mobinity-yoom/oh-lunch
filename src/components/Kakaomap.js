@@ -2,9 +2,8 @@
 import React from "react";
 
 export default function KakaoMap() {
-      // 카카오 맵 Place API 불러오기~
+      // 카카오 맵 Place API 불러오기
       const kakaoplaces = new kakao.maps.services.Places();
-    
 
       const callback = function(result, status, pagination) {
         if (status === kakao.maps.services.Status.OK) {
@@ -17,7 +16,7 @@ export default function KakaoMap() {
             }
         }
       };
-        // 음식점 코드 검색 (FD6)
+        // 음식점 코드 (FD6)
       kakaoplaces.categorySearch('FD6', callback, {
       // Map 객체를 지정하지 않았으므로 좌표객체를 생성하여 넘겨준다.
       location: new kakao.maps.LatLng(37.495061,127.1219948),

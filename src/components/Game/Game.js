@@ -1,52 +1,56 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { FlexBox } from './style';
 
-
-
+// require로 가져오면 이미지 엑박이 뜬다 
+import 데니스타코 from "../../img/데니스 타코 송파점.jpg";
+import 가족 from "../../img/가장맛있는족발 가락시장점.jpg";
+import 이가생 from "../../img/이가생삼겹살.jpg";
+import 함경도 from "../../img/함경도 찹쌀순대 가락시장점.jpg";
+import 가락 from "../../img/가락 골목냉면.jpg";
+import 오향가 from "../../img/오향가.jpg";
+import 전주 from "../../img/전주이맛콩나물국밥.jpg";
+import 홍콩반점 from "../../img/홍콩반점.jpg";
 
 //수동으로 저장된 레스토랑 목록.
-
-
 const items = [
     {
         name: "데니스타코",
-        src: require("../../img/데니스 타코 송파점.jpg")
+        src: 데니스타코
     },
     {
         name: "가장맛있는족발 가락시장점",
-        src: require("../../img/가장맛있는족발 가락시장점.jpg")
+        src: 가족
     },
     {
         name: "이가생삼겹살",
-        src: require("../../img/이가생삼겹살.jpg")
+        src: 이가생
     },
     {
         name: "함경도 찹쌀순대 가락시장점",
-        src: require("../../img/함경도 찹쌀순대 가락시장점.jpg")
+        src: 함경도
     },
     {
         name: "가락 골목냉면",
-        src: require("../../img/가락 골목냉면.jpg")
+        src: 가락
     },
     {
         name: "오향가",
-        src: require("../../img/오향가.jpg")
+        src: 오향가
     },
     {
         name: "전주이맛콩나물국밥",
-        src: require("../../img/전주이맛콩나물국밥.jpg")
+        src: 전주
     },
     {
         name: "홍콩반점",
-        src: require("../../img/홍콩반점.jpg")
+        src: 홍콩반점
     }
 ]
 
-
-
 const Game = () =>{
 
-    //이것이 HOOK 이여(useState, useEffect)     [state변수, 해당 변수를 갱신하는 함수]
+    //이것이 HOOK 이여(useState, useEffect)
+    // [state(ui 바뀌는)변수, 해당 변수를 갱신하는 함수]
     const [foods, setFoods] = useState([]);
     const [displays, setDisplays] = useState([]);
     const [winners, setWinners] = useState([]);
@@ -76,7 +80,7 @@ const Game = () =>{
         }
     }
 
-    //app.js 로 가는 JSX   보통 테이블같은걸 추가할때 map 을 씁니다.
+    // app.js 로 가는 JSX
     return (
     <FlexBox>
         <h1 className="title" id="title">Choose one !</h1>
