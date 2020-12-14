@@ -1,7 +1,6 @@
 import React from 'react';
 import Game from './components/Game/Game';
 import Getnearbyplace from './components/Getnearbyplace';
-import KakaoMap from './components/Kakaomap';
 
 // css in js 방식
 import {createGlobalStyle} from 'styled-components';
@@ -19,7 +18,6 @@ const App = () => {
       <GlobalStyle></GlobalStyle>
       <Game></Game>
       <Getnearbyplace></Getnearbyplace>
-      <KakaoMap></KakaoMap>
     </div>
   );
 }
