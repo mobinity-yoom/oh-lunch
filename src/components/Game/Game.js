@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FlexBox } from './style';
+import Getnearbyplace from "../Getnearbyplace"
 
 // require로 가져오면 이미지 엑박이 뜬다 
 import 데니스타코 from "../../img/데니스 타코 송파점.jpg";
@@ -86,14 +87,13 @@ const Game = () =>{
         <h1 className="title" id="title">Choose one !</h1>
         {displays.map(d => {
             return (
-                <div className="flex-1" key={d.name} 
+                <div className="flex-1" key={d.name}
                 onClick={clickHandler(d)}>
                 <img className="food-img" src={d.src} alt={d.name}/>
                 <div className="name">{d.name}</div>
             </div>
             )
         })}
-
     </FlexBox>
     );
 };
