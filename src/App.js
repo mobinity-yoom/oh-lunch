@@ -4,6 +4,7 @@ import Getnearbyplace from './components/Getnearbyplace';
 
 // css in js 방식
 import {createGlobalStyle} from 'styled-components';
+import KakaoMap from './components/Kakaomap';
 
 // global style 추가
 const GlobalStyle = createGlobalStyle`
@@ -18,6 +19,7 @@ const App = () => {
       <GlobalStyle></GlobalStyle>
       <Game></Game>
       <Getnearbyplace></Getnearbyplace>
+      <KakaoMap></KakaoMap>
     </div>
   );
 }

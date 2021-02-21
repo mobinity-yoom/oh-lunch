@@ -80,7 +80,7 @@ class Getnearbyplace extends Component {
                         <li>
                             <span>name: {result.name} </span>
                             <span>src: {result.place_id} </span>
-                            <span>photo: {result.photos[0].photo_reference} </span>
+                            {/* <span>photo: {result.photos[0].photo_reference} </span> */}
                         </li>
                     </Fragment>
                 ))}
